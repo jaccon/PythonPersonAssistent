@@ -1,0 +1,8 @@
+{
+    "intro" : "Olá senhor André, em que posso ajudar",
+    "input_type" : "Digite algo: ",
+    "assets" : "assets",
+    "record_file" : "assets/records/record.mp3",
+    "tts_component" : "components/tts",
+    "wikipedia_component" : "components/wikipedia"
+}

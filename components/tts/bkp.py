@@ -7,11 +7,12 @@ import os
 import sys
 from gtts import gTTS
 from pygame import mixer
+import time
 
 typedSpeechFile = 'typed.mp3'
 
 os.system('tput clear')
-wellcome = "Vamos lá, você digita e eu falo"
+wellcome = "Olá, "
 print (wellcome)
 tts = gTTS(text=wellcome, lang='pt')
 tts.save(typedSpeechFile)
@@ -20,11 +21,14 @@ mixer.music.load(typedSpeechFile)
 mixer.music.play()
 
 while True:
+    
+    from pygame import mixer
+
     print ('')
     str = input('What to speak ?  ')
     tts = gTTS(text=str, lang='pt')
-    print ('Speaking : ' + str)
     tts.save(typedSpeechFile)
+    
     mixer.init()
     mixer.music.load(typedSpeechFile)
     mixer.music.play()
