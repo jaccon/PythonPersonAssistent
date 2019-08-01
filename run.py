@@ -14,6 +14,9 @@ import wiki as wikipedia
 sys.path.insert(0,'./components/tts/')
 import tts as tts
 
+sys.path.insert(0,'./components/actions/')
+import actions as actions
+
 typedSpeechFile = config_data["record_file"]
 
 os.system('tput clear')
@@ -24,4 +27,5 @@ while True:
     print ('')
     str = input(config_data["input_type"])
     tts.textSpeeach(str)
+    actions.listen(str)
    
